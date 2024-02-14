@@ -1,4 +1,4 @@
-package com.example.lab5_practice.ui.theme
+package com.example.lab5.ui.theme
 
 import android.app.Activity
 import android.os.Build

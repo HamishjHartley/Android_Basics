@@ -1,4 +1,4 @@
-package com.example.lab5_practice
+package com.example.lab5
 
 import org.junit.Test
 

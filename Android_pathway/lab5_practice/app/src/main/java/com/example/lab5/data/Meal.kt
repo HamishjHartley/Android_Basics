@@ -1,3 +1,3 @@
-package com.example.lab5_practice.data
+package com.example.lab5.data
 
 data class Meal(val mealName : String, val mealCal: Int)

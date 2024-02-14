@@ -1,4 +1,4 @@
-package com.example.lab5_practice
+package com.example.lab5
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

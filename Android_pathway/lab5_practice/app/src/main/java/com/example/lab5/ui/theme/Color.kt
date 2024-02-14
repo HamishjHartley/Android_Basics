@@ -1,4 +1,4 @@
-package com.example.lab5_practice.ui.theme
+package com.example.lab5.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
