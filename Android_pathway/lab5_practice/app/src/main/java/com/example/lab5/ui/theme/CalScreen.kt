@@ -1,4 +1,4 @@
-package com.example.lab5.ui.theme
+package com.example.lab5.ui
 
 import android.app.Activity
 import androidx.compose.foundation.layout.Column
@@ -130,11 +130,10 @@ fun CalScreen(
 
 }
 
-
 @Composable
 @Preview
 fun CalScreenPreview() {
-    Lab5_practiceTheme {
+    Lab5Theme {
         CalScreen()
     }
 }
