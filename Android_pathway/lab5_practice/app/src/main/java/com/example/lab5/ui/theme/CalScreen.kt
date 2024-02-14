@@ -1,5 +1,6 @@
 package com.example.lab5.ui
 
+import com.example.lab5.ui.theme.Lab5Theme
 import android.app.Activity
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.text.KeyboardActions
@@ -122,9 +123,7 @@ fun CalScreen(
                         text = "Skip"
                     )
                 }
-
             }
-
         }
     }
 
@@ -133,7 +132,6 @@ fun CalScreen(
 @Composable
 @Preview
 fun CalScreenPreview() {
-    Lab5Theme {
         CalScreen()
-    }
+
 }

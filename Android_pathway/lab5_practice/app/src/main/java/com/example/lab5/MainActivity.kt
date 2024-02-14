@@ -1,5 +1,6 @@
 package com.example.lab5
 
+import com.example.lab5.ui.theme.Lab5Theme
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -11,9 +12,11 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-                Surface {
-                    CalScreen()
-                }
+            Surface {
+                CalScreen()
             }
+
         }
     }
+}
+
