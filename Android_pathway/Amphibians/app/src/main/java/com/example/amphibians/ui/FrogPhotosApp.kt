@@ -36,10 +36,12 @@ fun FrogPhotosApp() {
         ) {
             val frogViewModel: FrogViewModel=
                 viewModel(factory = FrogViewModel.Factory)
-            HomeScreen(frogUiState = frogViewModel.frogUiState,
+            HomeScreen(
+                frogUiState = frogViewModel.frogUiState,
                 retryAction = frogViewModel::getFrogPhotos,
                 modifier = Modifier.fillMaxSize(),
                 contentPadding = it
+            )
         }
     }
 }
