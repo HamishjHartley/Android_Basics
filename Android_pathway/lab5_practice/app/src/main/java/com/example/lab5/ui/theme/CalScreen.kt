@@ -24,6 +24,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 
 @Composable
 fun CalScreen(
@@ -90,20 +91,26 @@ fun CalScreen(
             }
             Card(
             ) {
+                val minInput = 0
+                var input by remember { mutableStateOf("") }
                 OutlinedTextField(
                     //TODO KCal must be > 0
                     value = "",
                     singleLine = true,
                     modifier = Modifier
                         .align(alignment = Alignment.CenterHorizontally),
-                    onValueChange = { },
+                    onValueChange = { if (it.toInt() > minInput) input = it},
                     label = { Text("KCal") },
                     isError = false,
                     keyboardOptions = KeyboardOptions.Default.copy(
                         imeAction = ImeAction.Done
                     ),
                     keyboardActions = KeyboardActions(
-                        onDone = {  }
+                        onDone = {
+                            if (input.isNotEmpty()){
+                                CalViewModel.addMeal(input)
+                            }
+                        }
                     )
                 )
                 Button(
@@ -112,7 +119,6 @@ fun CalScreen(
                             openDialog.value = true //Open final dialog screen
                         } else {
                             calViewModel.nextMeal(CalUiState.currentMeal)
-
                         }
 
                         openDialog.value = true },
